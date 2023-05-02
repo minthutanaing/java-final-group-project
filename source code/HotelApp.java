@@ -2,16 +2,22 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class HotelApp {
-    public static void main (String [] args){
+
+    public static void start() {
+        HotelApp app = new HotelApp();
+        app.bookRoom();
+    }
+    
+    public void bookRoom(){
         Scanner sc = new Scanner(System.in);
         ArrayList<Room> rooms = new ArrayList<>(); 
 
         for (int i = 1; i <= 30; i++){
-            Room room = new Room ("Single room", i);
+            Room room = new Room ("Single", i);
             rooms.add(room);
         }
         for (int i = 31; i <= 50; i++){
-            Room room = new Room ("Double room", i);
+            Room room = new Room ("Double", i);
             rooms.add(room);
         }
         for (int i = 51; i <= 55; i++){
